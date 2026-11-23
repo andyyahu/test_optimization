@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pixi environment
+.pixi/
+pixi.lock
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Legacy / external build folders
+openmm-8.4.0/
+
+# Runtime simulation outputs in optimized folder
+OpenMM_ConstantV_optimized/1v_0.5ns/
+OpenMM_ConstantV_optimized/1v_0.5ns*
+OpenMM_ConstantV_optimized/energy.log

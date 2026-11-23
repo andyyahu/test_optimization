@@ -1,0 +1,18 @@
+[workspace]
+name = "md_simulation"
+version = "0.1.0"
+description = "High-performance OpenMM & Analysis environment"
+authors = ["Andy <andyyuan.hu@gmail.com>"]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+openmm = ">=8.5.0,<9"
+numpy = ">=2.4.3,<3"
+scipy = ">=1.16.3,<2"
+lxml = ">=6.0.2,<7"
+
+[tasks]
+verify = "python OpenMM_ConstantV_optimized/verify_parity.py"
+run-optimized = { cmd = "python run_openMM.py", cwd = "OpenMM_ConstantV_optimized" }
+run-original = { cmd = "python run_openMM.py", cwd = "OpenMM_ConstantV_original" }
